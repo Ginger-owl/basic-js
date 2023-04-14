@@ -19,7 +19,7 @@ const HALF_LIFE_PERIOD = 5730;
  */
 function dateSample(sampleActivity) {
   function testSample(sample) {
-    return /^\d+$/.test(sample);
+    return /^\d+.?\d*$/.test(sample) && sample <= 15 && sample > 0;
   }
   //throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
@@ -30,7 +30,12 @@ function dateSample(sampleActivity) {
   if (!testSample(sampleActivity)) {
     return false
   }
-  return 22387
+  const time = -Math.floor(
+    (Math.log(sampleActivity) - Math.log(MODERN_ACTIVITY)) 
+    /
+    (0.693 / HALF_LIFE_PERIOD)
+    );
+  return time
 
 }
 
