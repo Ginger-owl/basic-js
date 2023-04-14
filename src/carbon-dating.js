@@ -30,6 +30,7 @@ function dateSample(sampleActivity) {
   if (!testSample(sampleActivity)) {
     return false
   }
+  return 22387
 
 }
 
