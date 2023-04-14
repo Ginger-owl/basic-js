@@ -15,10 +15,8 @@ function getSeason(date) {
   if (!date) {
     return 'Unable to determine the time of year!'
   }
-  //throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
   if (
-    !(date instanceof Date && !isNaN(date))
+    date.hasOwnProperty('toString') || !(date instanceof Date && !isNaN(date))
     ) {
     throw new Error('Invalid date!')
   }
