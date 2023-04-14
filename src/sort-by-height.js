@@ -17,7 +17,7 @@ function sortByHeight(arr) {
     if (el === -1) {
       return el
     }
-    return sortedNumArraya.pop()
+    return sortedNumArray.pop()
   })
 }
 
